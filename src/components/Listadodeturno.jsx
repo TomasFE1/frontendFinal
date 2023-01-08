@@ -12,7 +12,7 @@ function Listadodeturno() {
 
     useEffect(() => {
         // Realizamos una llamada a la API utilizando Axios
-        axios.get('http://localhost:8080/listadoturno')
+        axios.get('https://backendfinal-production-083b.up.railway.app/listadoturno')
             .then(res => setTurnos(res.data))
             .catch(err => console.error(err))
     }, []) // El segundo argumento del useEffect indica que solo se ejecutará la primera vez
@@ -23,7 +23,7 @@ function Listadodeturno() {
 
     const deleteTurno = async (id) => {
         try {
-            await axios.post(`http://localhost:8080/delete/${id}`)
+            await axios.post(`https://backendfinal-production-083b.up.railway.app/delete/${id}`)
                 .then(res => {
                     setTurnos(turnos.filter(turno => !turno._id.equals(id)))
                     

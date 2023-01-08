@@ -27,7 +27,7 @@ function Turno() {
 
 
         // Enviamos la solicitud HTTP a nuestra API utilizando axios
-        axios.post('http://localhost:8080/addTurno', formData)
+        axios.post('https://backendfinal-production-083b.up.railway.app/addTurno', formData)
             .then((response) => {
                 console.log(response.data); // si la solicitud tuvo éxito, imprimimos la respuesta en la consola
             })
